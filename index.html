@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Properties Playground</title>
+    <style>
+        body {
+            font-family: 'Monaco', monospace;
+            background-color: #000;
+            color: rgb(203, 78, 78);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .property {
+            margin-bottom: 40px;
+        }
+        
+        .property h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .property p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .property .demo {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        
+        .property input {
+            width: 100%;
+            padding: 5px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Properties Playground</h1>
+        
+        <div class="property">
+            <h2>Color</h2>
+            <p>The color property sets the color of the text. You can use predefined color names, hexadecimal values, or RGB values.</p>
+            <input type="text" id="colorInput" value="red" onchange="updateDemo('color')">
+            <div class="demo" id="colorDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Background-color</h2>
+            <p>The background-color property sets the background color of an element. It works with the same color values as the color property.</p>
+            <input type="text" id="bgColorInput" value="blue" onchange="updateDemo('background-color')">
+            <div class="demo" id="bgColorDemo"></div>
+        </div>
+        
+        <div class="property">
+            <h2>Font-size</h2>
+            <p>The font-size property sets the size of the text. You can specify the size in pixels, percentages, or other relative units.</p>
+            <input type="text" id="fontSizeInput" value="24px" onchange="updateDemo('font-size')">
+            <div class="demo" id="fontSizeDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Font-weight</h2>
+            <p>The font-weight property sets the boldness of the text. It accepts values from 100 to 900.</p>
+            <input type="text" id="fontWeightInput" value="normal" onchange="updateDemo('font-weight')">
+            <div class="demo" id="fontWeightDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Text-align</h2>
+            <p>The text-align property sets the alignment of the text within its container. It can be set to left, right, center, or justify.</p>
+            <input type="text" id="textAlignInput" value="left" onchange="updateDemo('text-align')">
+            <div class="demo" id="textAlignDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Padding</h2>
+            <p>The padding property sets the space between the content of an element and its border.</p>
+            <input type="text" id="paddingInput" value="10px" onchange="updateDemo('padding')">
+            <div class="demo" id="paddingDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Margin</h2>
+            <p>The margin property sets the space outside the border of an element.</p>
+            <input type="text" id="marginInput" value="20px" onchange="updateDemo('margin')">
+            <div class="demo" id="marginDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Border</h2>
+            <p>The border property sets the width, style, and color of an element's border.</p>
+            <input type="text" id="borderInput" value="2px solid #ccc" onchange="updateDemo('border')">
+            <div class="demo" id="borderDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Width</h2>
+            <p>The width property sets the width of an element.</p>
+            <input type="text" id="widthInput" value="300px" onchange="updateDemo('width')">
+            <div class="demo" id="widthDemo"></div>
+        </div>
+        
+        <div class="property">
+            <h2>Height</h2>
+            <p>The height property sets the height of an element.</p>
+            <input type="text" id="heightInput" value="300px" onchange="updateDemo('height')">
+            <div class="demo" id="heightDemo"></div>
+        </div>
+        
+        <div class="property">
+            <h2>Background-image</h2>
+            <p>The background-image property sets one or more background images for an element.</p>
+            <input type="text" id="backgroundImageInput" value="url('path/to/image.jpg')" onchange="updateDemo('background-image')">
+            <div class="demo" id="backgroundImageDemo"></div>
+        </div>
+        
+        <div class="property">
+            <h2>Opacity</h2>
+            <p>The opacity property sets the transparency of an element. It takes a value between 0.0 (completely transparent) and 1.0 (completely opaque).</p>
+            <input type="text" id="opacityInput" value="1" onchange="updateDemo('opacity')">
+            <div class="demo" id="opacityDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Text-decoration</h2>
+            <p>The text-decoration property sets the decorations applied to the text. It can be used to add underline, overline, line-through, or none.</p>
+            <input type="text" id="textDecorationInput" value="none" onchange="updateDemo('text-decoration')">
+            <div class="demo" id="textDecorationDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Transform</h2>
+            <p>The transform property applies a 2D or 3D transformation to an element. It can be used to rotate, scale, skew, or translate an element.</p>
+            <input type="text" id="transformInput" value="rotate(45deg)" onchange="updateDemo('transform')">
+            <div class="demo" id="transformDemo">Sample Text</div>
+        </div>
+        
+        <div class="property">
+            <h2>Box-shadow</h2>
+            <p>The box-shadow property adds a shadow effect to an element. It allows you to set the shadow's color, offset, blur, and spread.</p>
+            <input type="text" id="boxShadowInput" value="0 0 10px rgba(0, 0, 0, 0.5)" onchange="updateDemo('box-shadow')">
+            <div class="demo" id="boxShadowDemo"></div>
+        </div>
+        
+    </div>
+
+    <script>
+        function updateDemo(property) {
+            var inputValue = document.getElementById(property + 'Input').value;
+            var demoElement = document.getElementById(property + 'Demo');
+            demoElement.style.setProperty(property, inputValue);
+        }
+    </script>
+</body>
+</html>
