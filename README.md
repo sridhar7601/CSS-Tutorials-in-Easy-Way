@@ -34,6 +34,6 @@ You can clone this repository and use it for your own purposes. Please make sure
 
 Contributions to this project are welcome. If you find any issues or want to add new features, feel free to submit a pull request. Please ensure that your contributions align with the project's guidelines and coding standards.
 
-## License
+<!-- ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license. -->
